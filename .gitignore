@@ -1,0 +1,6 @@
+*.root
+*.pyc
+crab_MC
+crab_MC_*
+*.log
+*.josn
