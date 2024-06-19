@@ -11,7 +11,7 @@ config = config()
 # crab status -d <config.General.workArea>/<config.General.requestName>
 # To resubmit jobs:
 # crab resubmit -d <config.General.workArea>/<config.General.requestName>
-Mass = '4' #3p7,4,5,6,8,10,12,14
+Mass = '12' #3p7,4,5,6,8,10,12,14
 # Local job directory will be created in:
 # <config.General.workArea>/<config.General.requestName>
 
@@ -40,7 +40,7 @@ finished_taskLumis = getLumiListInValidFiles(dataset=final_dataset, dbsurl='phys
 newLumiMask = all_taskLumis - finished_taskLumis
 newLumiMask.writeJSON('my_lumi_mask_M_%s.json'%Mass)
 
-config.General.workArea        = 'crab_MC_recovered_task'
+config.General.workArea        = 'crab_MC_recovered_task_2'
 config.General.requestName     = 'raw_to_AODSIM_HToAATo4Tau_M_%s'%Mass
 config.General.transferOutputs = True
 config.General.transferLogs    = True
